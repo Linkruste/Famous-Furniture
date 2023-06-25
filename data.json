@@ -1,0 +1,58 @@
+{
+	"firstNames":
+	[
+		"John",
+		"Joe",
+		"Elon",
+		"Leonardo",
+		"Donald",
+		"Dwayne the",
+		"Tom",
+		"Pablo",
+		"Nikola",
+		"Marylin",
+		"Bill",
+		"Albert",
+		"Greta",
+		"Sigmund",
+		"Kim"
+	],
+
+	"furnitures":
+	[
+		"Tabouret",
+		"Chaise",
+		"Table",
+		"Bureau",
+		"Commode",
+		"Tiroir",
+		"Garde robe",
+		"Toilettes",
+		"Plan de travail"
+	],
+
+	"names":
+	[
+		"Holland",
+		"Biden",
+		"Trump",
+		"The Rock",
+		"Cena",
+		"Musk",
+		"Monroe",
+		"Gates",
+		"Einstein",
+		"Tesla",
+		"de Vinci",
+		"Lénine",
+		"Thunberg",
+		"Picasso",
+		"Di Ravello",
+		"Gucci",
+		"Freud",
+		"Kardashian",
+		"Hawking",
+		"Cruise",
+		"Di Caprio"
+	]
+}
