@@ -18,4 +18,4 @@ If you just want the furniture and the famous name:
 you can write uppercase, lowercase, the bot doesn't care.
 
 ## Why did you do this ?
-I thought it was funny. I coded it at 2 am ok ?
+I thought it was funny. I programmed it at 2 am ok ?
