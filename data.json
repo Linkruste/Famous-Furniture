@@ -19,17 +19,33 @@
 	],
 
 	"furnitures":
-	[
-		"Tabouret",
-		"Chaise",
-		"Table",
-		"Bureau",
-		"Commode",
-		"Tiroir",
-		"Garde robe",
-		"Toilettes",
-		"Plan de travail"
-	],
+	{
+		"fr":
+		[
+			"Tabouret",
+			"Chaise",
+			"Table",
+			"Bureau",
+			"Commode",
+			"Tiroir",
+			"Garde robe",
+			"Toilettes",
+			"Plan de travail"
+		],
+		"en":
+		[
+			"Stall",
+			"Chair",
+			"Table",
+			"Desk",
+			"Chest of drawers",
+			"Drawer",
+			"Wardrobe",
+			"WC",
+			"Workbench"
+		]
+	},
+	
 
 	"names":
 	[

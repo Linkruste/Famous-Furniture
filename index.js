@@ -4,6 +4,12 @@ const { furnitures, names, firstNames } = require("./data.json");
 
 const Bot = new Client({intents: [GatewayIntentBits.Guilds | GatewayIntentBits.GuildMessages ]});
 
+const Languages = 
+[
+	"fr",
+	"en",
+]
+
 // Select random element in array.
 function SelectRandom(_array)
 {
@@ -46,5 +52,5 @@ Bot.on("messageCreate", _message =>
 {
 	if((DoesStringIncludes(_message.content, "famous", "furniture") || DoesStringIncludes(_message.content, "célèbre", "meuble")) && _message.content.includes("<@1122279094973902958>"))
 		_message.reply(
-		{ content:`${ InclusiveStringIncludes(_message.content, "name", "nom") ? SelectRandom(firstNames) : "" } ${ CreateFamousFurniture(names, furnitures) }` });
+		{ content:`${ InclusiveStringIncludes(_message.content, "name", "nom") ? SelectRandom(firstNames) : "" } ${ CreateFamousFurniture(names, furnitures[_message.guild.preferredLocale]) }` });
 });
