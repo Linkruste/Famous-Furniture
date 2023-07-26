@@ -25,10 +25,8 @@ function CreateFamousFurniture(_names, _furniture)
 function DoesStringIncludes()
 {
 	for(let i = 1; i < arguments.length; i++)
-	{
 		if(!arguments[0].toLowerCase().includes(arguments[i].toLowerCase()))
 			return false;
-	}
 	return true
 }
 
@@ -50,7 +48,24 @@ Bot.login(token);
 
 Bot.on("messageCreate", _message =>
 {
-	if((DoesStringIncludes(_message.content, "famous", "furniture") || DoesStringIncludes(_message.content, "célèbre", "meuble")) && _message.content.includes("<@1122279094973902958>"))
+	if(_message.author.bot || !_message.content.includes("<@1122279094973902958>"))
+		return;
+	if((DoesStringIncludes(_message.content, "famous", "furniture") || DoesStringIncludes(_message.content, "célèbre", "meuble")))
+	{
+		let _lang;
+		if(_message.content[0] == "[" && _message.content[3] == "]")
+			_lang = _message.content.slice(1,3).toLowerCase();
+		else
+			_lang = _message.guild.preferredLocale.slice(0,2);
 		_message.reply(
-		{ content:`${ InclusiveStringIncludes(_message.content, "name", "nom") ? SelectRandom(firstNames) : "" } ${ CreateFamousFurniture(names, furnitures[_message.guild.preferredLocale]) }` });
+			{ content:`${ InclusiveStringIncludes(_message.content, "name", "nom") ? SelectRandom(firstNames) : "" } ${ CreateFamousFurniture(names, furnitures[_lang]) }` 
+		});
+		return;
+	}
+	_message.reply(
+	{
+		content: `\"${_message.content.replace("<@1122279094973902958>","")}\"; is **BASED**`
+	});
+	return;
+
 });
